@@ -45,13 +45,13 @@ const billing_controller = require("../controllers/billing_controller");
  */
  router.post("/factura", (req, res) => {
     let data = req.body;
-    billing_controller.getBills(data).then((response) =>{
+    billing_controller.createBill(data).then((response) =>{
         res.send({
             ok: true,
             info: data,
-            message: "Factura creado con éxito"
+            message: "Factura creada con éxito"
         });
-        console.log("Factura creado con éxito")
+        console.log("Factura creada con éxito")
     }).catch((error) =>{
         res.send(error);
         console.log(error)

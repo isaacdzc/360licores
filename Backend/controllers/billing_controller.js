@@ -29,10 +29,10 @@ const connection = require("../services/database");
  async function createBill(factura){
     let _connection = await new connection();
     let script = `INSERT INTO public.facturas(
-        idfacturas, fecha, valor, cantidad, productos_idproductos, )
+        idfacturas, fecha, valor, cantidad, productos_idproductos, clientes_idclientes)
         VALUES (
             '${factura.idfacturas}', 
-            current_date, 
+            current_date,
             '${factura.valor}', 
             '${factura.cantidad}', 
             '${factura.productos_idproductos}', 
