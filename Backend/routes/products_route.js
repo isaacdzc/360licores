@@ -77,10 +77,11 @@ const product_controller = require("../controllers/products_controller");
     })
  })
 
- /**
-  * 
-  */
-  router.delete("/producto/:idproductos", (req, res) =>{
+
+/**
+ * 
+ */
+ router.delete("/producto/:idproductos", (req, res) =>{
     let idproductos = req.params.idproductos;
     product_controller.deleteProduct(idproductos).then((response) =>{
         let data = response.rows;

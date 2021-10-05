@@ -30,7 +30,7 @@ async function getProducts(){
  async function createProduct(producto){
     let _connection = await new connection();
     let script = `INSERT INTO public.productos(
-        idproductos, nombre, precio, tamaño, existencias)
+        idproductos, nombre, precio, tamaño, existencias, categoria)
         VALUES (
             '${producto.idproductos}', 
             '${producto.nombre}', 
@@ -49,13 +49,13 @@ async function getProducts(){
  async function updateProduct(idproductos, data){
     let _connection = await new connection();
     let script = `UPDATE public.productos
-	SET idproductos='${data.idproductos}', 
-        nombre='${data.nombre}', 
-        precio='${data.precio}', 
-        tamaño='${data.tamaño}', 
-        existencias='${data.existencias}', 
-        categoria='${data.categoria}'
-        WHERE idproductos = '${idproductos}';`
+        SET idproductos='${data.idproductos}', 
+            nombre='${data.nombre}', 
+            precio='${data.precio}', 
+            tamaño='${data.tamaño}', 
+            existencias='${data.existencias}', 
+            categoria='${data.categoria}'
+            WHERE idproductos = '${idproductos}';`
     let response = await _connection.execute(script);
     return response;
   };
