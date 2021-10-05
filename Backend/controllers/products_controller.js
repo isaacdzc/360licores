@@ -17,8 +17,8 @@ async function getProducts(){
  */
  async function getProduct(idproductos){
     let _connection = await new connection();
-    let script = `SELECT *FROM public.productos WHERE 
-        idproductos = '${idproductos}';`; 
+    let script = `SELECT * FROM public.productos 
+        WHERE idproductos = '${idproductos}';`; 
     let response = await _connection.execute(script);
     return response;
 }

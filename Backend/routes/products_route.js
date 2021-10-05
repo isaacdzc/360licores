@@ -37,7 +37,6 @@ const product_controller = require("../controllers/products_controller");
     }).catch((error) =>{
         res.send(error);
         console.log(error)
-    
     });
 });
 
