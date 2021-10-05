@@ -1,0 +1,21 @@
+{
+  "name": "indicadores_backend",
+  "version": "1.0.0",
+  "description": "En esta carpeta se encuentra todo lo relacionado con el manejo de formulario, bases de datos",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
