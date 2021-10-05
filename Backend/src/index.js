@@ -20,5 +20,11 @@ app.get('/', (req, res) => res.send(
   status: "OK"}));
 
 const products_route = require("../routes/products_route");
+const stock_route = require("../routes/stock_route");
+const billing_route = require("../routes/billing_route");
 
-app.use(products_route);
+app.use(
+  products_route,
+  stock_route,
+  billing_route,
+  );
