@@ -2,6 +2,7 @@ const connection = require("../services/database");
 
 /**
  * @param
+ * Obtiene el stock de todos los productos
  */
  async function getStock(){
     let _connection = await new connection();
@@ -12,7 +13,7 @@ const connection = require("../services/database");
 
 /**
  * @param {idproductos}
- * Obtiene un producto según idproductos
+ * Obtiene el stock de un producto según su idproductos
  */
  async function getProduct(idproductos){
     let _connection = await new connection();

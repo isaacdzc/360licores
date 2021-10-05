@@ -4,7 +4,8 @@ const router = express.Router();
 const stock_controller = require("../controllers/stock_controller");
 
 /**
- * 
+ * @param {}
+ * Obtiene todo el stock
  */
  router.get("/stock", (req, res) => {
     stock_controller.getStock().then((response) =>{
@@ -22,7 +23,8 @@ const stock_controller = require("../controllers/stock_controller");
 });
 
 /**
- * 
+ * @param {idproductos}
+ * Obtiene el stock de un producto según idproductos
  */
  router.get("/stock/:idproductos", (req, res) =>{
     let idproductos = req.params.idproductos;

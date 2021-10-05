@@ -3,8 +3,10 @@ const express = require("express");
 const router = express.Router();
 
 const product_controller = require("../controllers/products_controller");
+
 /**
- * 
+ * @param {}
+ * Obtiene todos los productos
  */
  router.get("/productos", (req, res) => {
     product_controller.getProducts().then((response) =>{
@@ -22,7 +24,8 @@ const product_controller = require("../controllers/products_controller");
 });
 
 /**
- * 
+ * @param {idproductos}
+ * Obtiene una factura según su idproductos
  */
  router.get("/producto/:idproductos", (req, res) =>{
     let idproductos = req.params.idproductos;
@@ -41,7 +44,8 @@ const product_controller = require("../controllers/products_controller");
 });
 
 /**
- * 
+ * @param {producto}
+ * Crea un producto según body
  */
  router.post("/producto", (req, res) => {
     let data = req.body;
@@ -59,7 +63,8 @@ const product_controller = require("../controllers/products_controller");
 });
 
 /**
- * 
+ * @param {producto}
+ * Actualiza un producto según body
  */
  router.put("/producto/:idproductos", (req, res) =>{
     let idproductos = req.params.idproductos;
@@ -79,7 +84,8 @@ const product_controller = require("../controllers/products_controller");
 
 
 /**
- * 
+ * @param {idproductos}
+ * Elimina una factura según idproductos
  */
  router.delete("/producto/:idproductos", (req, res) =>{
     let idproductos = req.params.idproductos;

@@ -2,6 +2,7 @@ const connection = require("../services/database");
 
 /**
  * @param
+ * Obtiene todas las facturas
  */
  async function getBills(){
     let _connection = await new connection();
@@ -43,7 +44,7 @@ const connection = require("../services/database");
 
   /**
  * @param {factura}
- * Crea un producto con parametros ingresados en body
+ * Crea una factura con parametros ingresados en body
  */
  async function updateBill(idfacturas, data){
     let _connection = await new connection();
@@ -58,7 +59,8 @@ const connection = require("../services/database");
 };
 
 /**
- * 
+ * @param {idfacturas}
+ * Elimina una factura segun su idfacturas
  */
 async function deleteBill(idfacturas){
     let _connection = await new connection();

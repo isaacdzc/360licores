@@ -4,7 +4,8 @@ const router = express.Router();
 const billing_controller = require("../controllers/billing_controller");
 
 /**
- * 
+ * @param {}
+ * Obtiene todas las facturas
  */
  router.get("/facturas", (req, res) => {
     billing_controller.getBills().then((response) =>{
@@ -22,7 +23,8 @@ const billing_controller = require("../controllers/billing_controller");
 });
 
 /**
- * 
+ * @param {idfacturas}
+ * Obtiene una factura según su idfacturas
  */
  router.get("/factura/:idfacturas", (req, res) =>{
     let idfacturas = req.params.idfacturas;
@@ -41,7 +43,8 @@ const billing_controller = require("../controllers/billing_controller");
 });
 
 /**
- * 
+ * @param {factura}
+ * Crea una factura según body
  */
  router.post("/factura", (req, res) => {
     let data = req.body;
@@ -59,7 +62,8 @@ const billing_controller = require("../controllers/billing_controller");
 });
 
 /**
- * 
+ * @param {factura}
+ * Actualiza una factura 
  */
  router.put("/factura/:idfacturas", (req, res) =>{
     let idfacturas = req.params.idfacturas;
@@ -78,7 +82,8 @@ const billing_controller = require("../controllers/billing_controller");
  })
 
  /**
- * 
+ * @param {factura}
+ * Elimina una factura según idfacturas
  */
   router.delete("/factura/:idfacturas", (req, res) =>{
     let idfacturas = req.params.idfacturas;

@@ -61,7 +61,8 @@ async function getProducts(){
   };
   
 /**
- * 
+ * @param {idproductos}
+ * Elimina un producto según su idproductos
  */
 async function deleteProduct(idproductos){
     let _connection = await new connection();
